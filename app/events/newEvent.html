@@ -1,0 +1,30 @@
+<div style="padding-left:20px; padding-right:20px">
+    <div class="container">
+      <h1>New Event</h1>
+      <hr>
+      <form name="newEventForm">
+        <fieldset>
+          <label for="eventName">Event Name:</label>
+          <input id="eventName" type="text" required ng-model="vm.event.name" placeholder="Name of your event..." /><br>
+          <label for="eventDate">Event Date:</label>
+          <input id="eventDate" type="text" date-keys required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="vm.event.date" placeholder="format (mm/dd/yyyy)..." /><br>
+          <label for="eventTime">Event Time:</label>
+          <input id="eventTime" type="text" ng-model="vm.event.time" placeholder="start and end time..." /><br>
+          <label for="eventLocation">Event Location:</label>
+          <input id="eventLocation" type="text" ng-model="vm.event.location.address" placeholder="Address of event..." />
+          <input id="eventCity" type="text" ng-model="vm.event.location.city" class="input-small" placeholder="City..." />
+          <input id="eventProvince" type="text" ng-model="vm.event.location.province" class="input-small" placeholder="Province..." />
+          <div>{{event.name}}</div>
+          <label for="eventImageUrl">Image:</label>
+          <input id="eventImageUrl" type="url" ng-model="vm.event.imageUrl" class="input-xlarge" placeholder="url of image..." />
+        </fieldset>
+
+        <img ng-src="{{vm.event.imageUrl}}" />
+        <br />
+        <br />
+
+        <button type="submit" ng-disabled="newEventForm.$invalid" ng-click="vm.saveEvent(vm.event, newEventForm)" class="btn btn-primary">Save</button>
+        <button type="button" ng-click="vm.cancelEvent()" class="btn btn-default">Cancel</button>
+      </form>
+    </div>
+</div>

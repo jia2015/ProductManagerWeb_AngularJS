@@ -19,17 +19,23 @@
     <script type="text/javascript" src="js/toastr.js"></script>
     <script type="text/javascript" src="js/d3.js"></script>
     <script type="text/javascript" src="js/angular-charts.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular-sanitize.min.js"></script>
 
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="common/services/common.services.js"></script>
 	<script type="text/javascript" src="common/services/productResource.js"></script>
 	<script type="text/javascript" src="common/services/productResourceMock.js"></script>
     <script type="text/javascript" src="common/services/productService.js"></script>
+    <script type="text/javascript" src="common/services/eventData.js"></script>
+    <script type="text/javascript" src="common/services/gravatarUrlBuilder.js"></script>
 
 	<script type="text/javascript" src="app/products/productListCtrl.js"></script>
 	<script type="text/javascript" src="app/products/productDetailCtrl.js"></script>
     <script type="text/javascript" src="app/products/productEditCtrl.js"></script>
     <script type="text/javascript" src="app/prices/priceAnalyticsCtrl.js"></script>
+    <script type="text/javascript" src="app/events/eventsCtrl.js"></script>
+    <script type="text/javascript" src="app/events/eventEditCtrl.js"></script>
+    <script type="text/javascript" src="app/profiles/profileEditCtrl.js"></script>
 </head>
 
 <body ng-app="productManagement">
@@ -52,6 +58,8 @@
                     <li><a ui-sref="productList">Product List</a></li>
                     <li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add product</a></li>
                     <li><a ui-sref="priceAnalytics">Price Analytics</a></li>
+                    <li><a ui-sref="eventsApp">Events App</a></li>
+                    <li><a ui-sref="eventEdit">Create Event</a></li>
                 </ul>
             </div>
         </div>

@@ -7,6 +7,7 @@
                             "ui.bootstrap",
                             "ngMessages",
                             'angularCharts',
+                            "ngSanitize", 
 							"productResourceMock"]);
 
 	app.config(["$stateProvider", "$urlRouterProvider", 
@@ -80,6 +81,22 @@
                         return productResource.query().$promise;
                     }
                 }
+            })
+
+            .state('eventsApp', {
+                url: '/eventsApp',
+                templateUrl: 'app/events/eventsView.html',
+                controller: 'EventsCtrl as vm'                
+            })
+            .state('eventEdit', {
+                url: '/eventEdit',
+                templateUrl: 'app/events/newEvent.html',
+                controller: 'EventEditCtrl as vm'                
+            })
+            .state('profileEdit', {
+                url: '/profileEdit',
+                templateUrl: 'app/profiles/profileEdit.html',
+                controller: 'ProfileEditCtrl as vm'                
             })
 
 		}]
